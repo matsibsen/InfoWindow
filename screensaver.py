@@ -2,7 +2,7 @@
 
 import logging
 import os
-from driver import epd7in5b
+from driver import epd12in48b
 from PIL import Image
 
 # Setup Logging -  change to logging.DEBUG if you are having issues.
@@ -11,7 +11,7 @@ logging.info("Screen saver starting")
 
 
 def main():
-    epd = epd7in5b.EPD()
+    epd = epd12in48b.EPD()
     epd.init()
 
     images = ["red.png", "black.png", "white.png"]

@@ -1,4 +1,4 @@
-from driver import epd7in5b
+from driver import epd12in48b
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -10,11 +10,11 @@ import tempfile
 
 class InfoWindow:
     def __init__(self, options):
-        self.epd = epd7in5b.EPD()
+        self.epd = epd12in48b.EPD()
         self.epd.init()
-        self.width = 640
-        self.height = 384
-        self.image = Image.new('L', (640, 384), 255)
+        self.width = 1304
+        self.height = 984
+        self.image = Image.new('L', (1304, 984), 255)
         self.draw = ImageDraw.Draw(self.image)
         self.fonts = {}
         self.initFonts()
